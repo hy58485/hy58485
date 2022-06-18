@@ -1,0 +1,23 @@
+class student:
+    def __init__(self,aname,abranch,acentre,apassingyear,agap):
+        self.name=aname
+        self.branch=abranch
+        self.centre=acentre
+        self.passingyear=apassingyear
+        self.gap=agap
+    def printdetails(self):
+        return f"The name is {self.name} and branch is {self.branch} and centre is {self.centre} and passingyear is {self.passingyear} and gap is {self.gap}."
+    @classmethod
+    def from_str(cls,string):
+        #params=string.split("-")
+        #return cls(params[0],params[1],params[2],params[3],params[4])
+        '''* is argument to return value'''
+        return cls(*string.split("-"))
+
+ankit=student.from_str("Ankit-CS-Saket-2021-1")
+karan=student.from_str("karan-EE-IGNOU-2022-1")
+tanu=student.from_str("tanu-EC-Saket-2021-0")
+Ashu=student.from_str("ashu-CS-IGNOU-2021-0")
+print(tanu.gap)
+print(Ashu.branch)
+print(karan.printdetails())

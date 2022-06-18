@@ -1,0 +1,32 @@
+class SME:
+    def __init__(self,aname, agmail,asubject,astatus,acount,aallotted,asubmitted,apending,aQCpending,arework,aapproved):
+     self.name=aname
+     self.gmail=agmail
+     self.subject=asubject
+     self.status=astatus
+     self.count=acount
+     self.allotted=aallotted
+     self.submitted=asubmitted
+     self.pending=apending
+     self.QCpending=aQCpending
+     self.rework=arework
+     self.approved=aapproved
+
+    def printdetails(self):
+        return f"The name is {self.name} and the gmail id is {self.gmail} and subject choosen is { self.subject} , Status of {self.name} is {self.status}. the total count is {self.count} and question submitted is {self.allotted} .\nPending Question: {self.pending} \nQC pending: {self.QCpending} \nRework: {self.rework} \nQuestion Approved: {self.approved}"
+    @classmethod
+    def from_dash(cls,string):
+            return cls(*string.split("-"))
+
+
+Nehal=SME.from_dash("Nehal Anurag-nehalanurag18@gmail.com-Maths-Active-20-473-473-0-0-0-472")																
+Byapti=SME.from_dash("Byapti Mahapatra-byapti007@gmail.com-Chemistry-Inactive-30-672-672-0-0-11-652")																
+Epsibha=SME.from_dash("Epsibha Pramila. M-epsibhamanogaran631@gmail.com-Physics-Active-70-1627-1627-0-0-8-1609")			
+Niraj=SME.from_dash("Niraj kumar-nirajeee7669@gmail.com-Maths-Inactive-15-0-0-0-0-0-0")								
+Kavita=SME.from_dash("Kavita Rawat-kavirawt08@gmail.com-Physics-Active-50-711-711-0-0-5-705")													
+Subhrajeet=SME.from_dash("Subhrajeet Das-subhrajeetdas8@gmail.com-Chemistry-Inactive-20-0-0-0-0-0-0")															
+Atif=SME.from_dash("Atif Ahmad Kahn-atifahmadkhan79@gmail.com-Maths-Inactive-20-24-24-0-0-3-21")																
+Navneet=SME.from_dash("Navneet kaur-kaur04879@gmail.com-Chemistry-Active-30-61-61-0-0-4-53")															
+Mehreen=SME.from_dash("Mehreen Naseer-mehreen.it@gmail.com-General Knowledge-Inactive-40-368-368-0-0-4-359")
+
+print(Byapti.printdetails())
